@@ -8,14 +8,38 @@
 import SwiftUI
 
 struct ContentView: View {
+    @ObservedObject var viewModel = UserViewModel()
+    @State var currentPage = 1
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        NavigationStack {
+            if viewModel.users.isEmpty {
+                ProgressView("Preparing Data")
+                    .onAppear{
+                        viewModel.prepareData()
+                    }
+                    .navigationTitle("Users")
+                    .toolbarBackground(Color.yellow, for: .navigationBar)
+            }
+            else {
+                List(viewModel.users, id: \.id) { user in
+                    UserRow(user: user)
+                        .onAppear(perform: {
+                        if user.id == viewModel.users[viewModel.users.count - 3].id {
+                            loadNextPage()
+                        }
+                    })
+                }
+                .listStyle(PlainListStyle())
+                .navigationTitle("Users")
+                .toolbarBackground(Color.yellow, for: .navigationBar)
+                
+            }
         }
-        .padding()
+    }
+    
+    private func loadNextPage() {
+        // load data
     }
 }
 

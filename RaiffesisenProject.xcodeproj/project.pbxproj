@@ -14,6 +14,13 @@
 		B0E2A67D2B248EA800673596 /* RaiffesisenProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E2A67C2B248EA800673596 /* RaiffesisenProjectTests.swift */; };
 		B0E2A6872B248EA900673596 /* RaiffesisenProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E2A6862B248EA900673596 /* RaiffesisenProjectUITests.swift */; };
 		B0E2A6892B248EA900673596 /* RaiffesisenProjectUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E2A6882B248EA900673596 /* RaiffesisenProjectUITestsLaunchTests.swift */; };
+		B0E2A6982B248F7E00673596 /* APIUserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E2A6972B248F7E00673596 /* APIUserModel.swift */; };
+		B0E2A69A2B248FEE00673596 /* LocationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E2A6992B248FEE00673596 /* LocationModel.swift */; };
+		B0E2A69C2B2490BA00673596 /* ResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E2A69B2B2490BA00673596 /* ResponseModel.swift */; };
+		B0E2A69F2B24995500673596 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E2A69E2B24995500673596 /* NetworkManager.swift */; };
+		B0E2A6A22B24999900673596 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E2A6A12B24999900673596 /* UserViewModel.swift */; };
+		B0E2A6A42B2499D700673596 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E2A6A32B2499D700673596 /* UserModel.swift */; };
+		B0E2A6A62B24A72B00673596 /* UserRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E2A6A52B24A72B00673596 /* UserRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +51,13 @@
 		B0E2A6822B248EA900673596 /* RaiffesisenProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RaiffesisenProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0E2A6862B248EA900673596 /* RaiffesisenProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaiffesisenProjectUITests.swift; sourceTree = "<group>"; };
 		B0E2A6882B248EA900673596 /* RaiffesisenProjectUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaiffesisenProjectUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		B0E2A6972B248F7E00673596 /* APIUserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIUserModel.swift; sourceTree = "<group>"; };
+		B0E2A6992B248FEE00673596 /* LocationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationModel.swift; sourceTree = "<group>"; };
+		B0E2A69B2B2490BA00673596 /* ResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseModel.swift; sourceTree = "<group>"; };
+		B0E2A69E2B24995500673596 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		B0E2A6A12B24999900673596 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
+		B0E2A6A32B2499D700673596 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		B0E2A6A52B24A72B00673596 /* UserRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,8 +108,11 @@
 		B0E2A66A2B248E9F00673596 /* RaiffesisenProject */ = {
 			isa = PBXGroup;
 			children = (
+				B0E2A6A02B24998100673596 /* ViewModels */,
+				B0E2A69D2B24993800673596 /* Networking */,
+				B0E2A6962B248F4000673596 /* Models */,
+				B0E2A6952B248F3000673596 /* Views */,
 				B0E2A66B2B248E9F00673596 /* RaiffesisenProjectApp.swift */,
-				B0E2A66D2B248E9F00673596 /* ContentView.swift */,
 				B0E2A66F2B248EA800673596 /* Assets.xcassets */,
 				B0E2A6712B248EA800673596 /* Preview Content */,
 			);
@@ -125,6 +142,42 @@
 				B0E2A6882B248EA900673596 /* RaiffesisenProjectUITestsLaunchTests.swift */,
 			);
 			path = RaiffesisenProjectUITests;
+			sourceTree = "<group>";
+		};
+		B0E2A6952B248F3000673596 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B0E2A66D2B248E9F00673596 /* ContentView.swift */,
+				B0E2A6A52B24A72B00673596 /* UserRow.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B0E2A6962B248F4000673596 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B0E2A6972B248F7E00673596 /* APIUserModel.swift */,
+				B0E2A6992B248FEE00673596 /* LocationModel.swift */,
+				B0E2A69B2B2490BA00673596 /* ResponseModel.swift */,
+				B0E2A6A32B2499D700673596 /* UserModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B0E2A69D2B24993800673596 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				B0E2A69E2B24995500673596 /* NetworkManager.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		B0E2A6A02B24998100673596 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				B0E2A6A12B24999900673596 /* UserViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,7 +310,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0E2A69F2B24995500673596 /* NetworkManager.swift in Sources */,
+				B0E2A69A2B248FEE00673596 /* LocationModel.swift in Sources */,
+				B0E2A6A42B2499D700673596 /* UserModel.swift in Sources */,
+				B0E2A6982B248F7E00673596 /* APIUserModel.swift in Sources */,
 				B0E2A66E2B248E9F00673596 /* ContentView.swift in Sources */,
+				B0E2A69C2B2490BA00673596 /* ResponseModel.swift in Sources */,
+				B0E2A6A62B24A72B00673596 /* UserRow.swift in Sources */,
+				B0E2A6A22B24999900673596 /* UserViewModel.swift in Sources */,
 				B0E2A66C2B248E9F00673596 /* RaiffesisenProjectApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

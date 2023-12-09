@@ -26,7 +26,7 @@ final class NetworkingManager {
     typealias ApiCompletionHandler = (Result<ResponseModel,ApiErrors>) -> Void
     typealias ImageCompletionHandler = (Result<URL,ImageErrors>) -> Void
     
-    private let url = "https://randomuser.me/api/?page=0&results=20&seed=abc"
+    private let url = "https://randomuser.me/api/?page=0&results=10&seed=abc"
     
     func fetchData(completion: @escaping ApiCompletionHandler) {
         guard let apiURL = URL(string: url) else {
